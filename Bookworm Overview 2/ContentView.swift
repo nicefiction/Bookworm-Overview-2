@@ -1,21 +1,39 @@
-//
-//  ContentView.swift
-//  Bookworm Overview 2
-//
-//  Created by Olivier Van hamme on 28/07/2021.
-//
+// ContentView.swift
 
 import SwiftUI
 
+
+
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+   
+   // MARK: - PROPERTY WRAPPERS
+   
+   @State private var hasRememberedMe: Bool = false
+   
+   
+   
+   // MARK: - COMPUTED PROPERTIES
+   
+   var body: some View {
+      
+      VStack {
+         PushButtonView(isOn: $hasRememberedMe,
+                        title: "Hello World")
+         Text(hasRememberedMe ? "ON" : "OFF")
+      }
+   }
 }
 
+
+
+
+
+// MARK: - PREVIEWS -
+
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+   
+   static var previews: some View {
+      
+      ContentView()
+   }
 }
