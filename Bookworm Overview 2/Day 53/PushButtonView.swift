@@ -7,7 +7,7 @@ struct PushButtonView: View {
    
    // MARK: - PROPERTY WRAPPERS
    
-   @State private var hasRememberedMe: Bool = false
+   @State private var isRememberingMe: Bool = false
    // @State var isOn: Bool
    @Binding var isOn: Bool
    
@@ -27,7 +27,7 @@ struct PushButtonView: View {
    var body: some View {
       
       VStack {
-         // Toggle(title, isOn: $hasRememberedMe)
+         // Toggle(title, isOn: $isRememberingMe)
          Toggle(title, isOn: $isOn)
             .padding()
          Button(isOn ? onTitle : offTitle) {

@@ -11,7 +11,8 @@ import SwiftUI
 struct Bookworm_Overview_2App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // ContentView()
+         SizeClasses()
         }
     }
 }

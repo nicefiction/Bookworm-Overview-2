@@ -8,7 +8,7 @@ struct ContentView: View {
    
    // MARK: - PROPERTY WRAPPERS
    
-   @State private var hasRememberedMe: Bool = false
+   @State private var isOn: Bool = false
    
    
    
@@ -17,9 +17,9 @@ struct ContentView: View {
    var body: some View {
       
       VStack {
-         PushButtonView(isOn: $hasRememberedMe,
+         PushButtonView(isOn: $isOn,
                         title: "Hello World")
-         Text(hasRememberedMe ? "ON" : "OFF")
+         Text(isOn ? "ON" : "OFF")
       }
    }
 }
